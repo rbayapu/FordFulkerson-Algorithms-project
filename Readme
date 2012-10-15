@@ -1,0 +1,91 @@
+Readme
+
+##File Description###
+_________________________________________
+My project is done in c++ language using FordFulkerson algorithm.
+
+The project contains 2 files as given below: 
+
+	The Source files: 
+		1. Graph.cpp - Contains the definitions for the members of class like node, edge, graph etc.
+		2. FordFulkerson.cpp - Contains the main implementation program.
+
+
+
+###Class Description###
+_________________________________________
+
+	 The entire code is properly commented and so is easy to understand.
+
+	- The FordFulkerson.cpp contains following important functions: 
+		
+		
+	    //Creating an initial graph
+         Graph* createInitGraph();
+    
+	    //Creates an initial residual graph before performing Delta
+	    Graph* createResidualGraph(Graph* graph);
+
+    	    //Creates a residual graph from initial residual graph
+	    void createResidualGraphDelta(Graph* resGraph , int delta);
+
+	    //Augmenting the path
+	    void augment(Graph* graph , vector<Edge*> path);
+
+- The Graph.cpp contains following important classes: 
+
+	   //A Node in the Adjacency List of a graph
+		class Node{  };
+
+	   // Edge of Graph
+              class edge{  };
+
+           //Class for Graph
+             class graph{ };
+
+- The Graph.cpp contains following important functions: 
+
+           // For Finding an edge between u and v
+              Edge* getEdge(Vertex u, Vertex v);
+
+          // For removing edge from the graph
+              void removeEdge(Edge e);
+
+         //For modifying the capacity and flow of edge
+             void modifyEdge(Edge e);
+
+        //For calculating total flow from the source
+             int getTotalFlowFromSource(Vertex src);
+
+        //Calculate Total capacity from source
+	int getMaxCapFromSource(Vertex src);
+
+       // Get All the Edges of the Graph
+	vector<Edge> getAllEdges()
+
+      //Find path between start and end vertex using BFS
+	vector<Edge*> findPathByBFS(Vertex s , Vertex t)
+
+
+
+Representation of Graph:
+_________________________________________
+
+	- The graph has been represented as an n x n adjacency matrix. 
+
+How To Run:
+_________________________________________
+
+	1. Compile the project:
+		make
+	2. Run the project:
+		./run
+Input:
+_________________________________________
+
+	- user is asked  to enter the input file
+
+Output:
+_________________________________________
+
+	- Corresponding output is drawn from the given input.
